@@ -71,13 +71,22 @@ git clone -b master git@github.com:jerryc127/hexo-theme-butterfly.git themes/but
 ```bash
 rm -rf themes/butterfly/.git themes/butterfly/.github
 ```
-#### 以上命令会把仓库butterfly克隆到thems目录下的butterfly子目录中 ，然后
+#### 以上命令会把仓库butterfly克隆到thems目录下的butterfly子目录中 并删除主题里的.git与.github文件夹。
 #### 修改 Hexo 根目錄下的 _config.yml，把主題改為 butterfly
 theme: butterfly
+
 #### 安装这个主题所需要的依赖
 ```bash
 npm install hexo-renderer-pug hexo-renderer-stylus
 ```
+#### 修改项目的而不是主题的根目录下_config.yml文件
+1,cloudflare可以正常显示页面，github page不能正常显示的配置如下
+url: https://gitychzh.github.io/hskt6 
+root: /
+2，github pages可以正常展示页面，cloudflare不能正常展示如下
+url: https://gitychzh.github.io
+root: /hskt6 /
+3，hskt6换成你自己的项目名，暂时没有更好的办法解决这个问题，可以考虑建两个仓库，分别部署。
 #### 升级建议
 在 hexo 的根目錄創建一個文件 _config.butterfly.yml，並把主題目錄的 _config.yml 內容複製到 _config.butterfly.yml 去。注意，这个_config.butterfly.yml优先级比根目录下的_config.yml高，所以不用担心冲突。
 ### 项目本地编译与预览
