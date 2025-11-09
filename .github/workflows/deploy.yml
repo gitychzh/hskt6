@@ -2,7 +2,7 @@ name: Deploy Hexo to GH-Pages
 
 on:
   push:
-    branches: [ main, master ] # 当推送到main或master分支时触发，请根据你的仓库默认分支名修改
+    branches: [ main, master ] # 当推送到main或master分支时触发，请根据你的仓库默认分支名修改修改来自gitee镜像模式1
 
 jobs:
   build-and-deploy:
