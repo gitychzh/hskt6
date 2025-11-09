@@ -63,7 +63,7 @@ git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes
 ```bash
 git clone -b master git@github.com:jerryc127/hexo-theme-butterfly.git themes/butterfly
 ```
-必须接触绑定，否则会与工作流产生冲突，执行如下命令(已废除)
+必须立刻解除绑定，否则会与工作流产生冲突，执行如下命令(已废除)如果未删除.git和.github文件夹就运行了，那就不许删除缓存了
 ```bash
 ~~ git rm -r --cached themes/butterfly~~
 ```
@@ -108,3 +108,4 @@ git push -u origin master
 也可以强制推送
 git push -u origin master --force
 第一次，以后就只需要git push即可 或者后面加--force
+#### git 克隆仓库的时候，记得在末尾 加 点 . 表示在当前目录下下载资源。
