@@ -472,8 +472,8 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use: local_search
-  placeholder:
+  use: local_search #@ychzh 修改3
+  placeholder: 
 
   # Algolia Search
   algolia_search:
