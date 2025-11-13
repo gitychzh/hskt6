@@ -11,17 +11,50 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: /img/烤红薯.png #@ychzh 修改4 ，这个是修改了左上角ychzh_title的头像
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
   fixed: false
-
+# menu:
+# 首頁: / || fas fa-home
+# 時間軸: /archives/ || fas fa-archive
+# 標籤: /tags/ || fas fa-tags
+# 分類: /categories/ || fas fa-folder-open
+# 清單||fa fa-heartbeat:
+# 音樂: /music/ || fas fa-music
+# 照片: /Gallery/ || fas fa-images
+# 電影: /movies/ || fas fa-video
+# 友鏈: /link/ || fas fa-link
+# 關於: /about/ || fas fa-heart
+# menu:
+#   首頁: / || fas fa-home
+#   時間軸: /archives/ || fas fa-archive
+#   標籤: /tags/ || fas fa-tags
+#   分類: /categories/ || fas fa-folder-open
+#   清單||fas fa-heartbeat:
+#     音樂: /music/ || fas fa-music
+#     照片: /Gallery/ || fas fa-images
+#     電影: /movies/ || fas fa-video
+#   友鏈: /link/ || fas fa-link
+#   關於: /about/ || fas fa-heart
 menu:
-  Home: / || fas fa-home
+  首页: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
+  Link: /link/ || fas fa-link
+  About: /about/ || fas fa-heart
+
+
+# menu:
+#   Home: / || fas fa-home
+#   List||fas fa-list:
+#     Music: /music/ || fas fa-music
+#     Movie: /movies/ || fas fa-video
 
 # --------------------------------------
 # Code Blocks Settings
@@ -92,7 +125,16 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
+# 背景设置 @ychzh 修改5
 background:
+  # 使用图片作为背景
+  image: /img/背景图_枫树.png
+  # 背景位置
+  position: center
+  # 背景大小
+  size: cover
+  # 背景重复方式
+  repeat: no-repeat
 
 cover:
   # Disable the cover or not
