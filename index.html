@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ychzh_title</title><meta name="author" content="ychzh"><meta name="copyright" content="ychzh"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="ychzh_title">
+<meta property="og:url" content="https://gitychzh.github.io/hskt6/index.html">
+<meta property="og:site_name" content="ychzh_title">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitychzh.github.io/hskt6/img/butterfly-icon.png">
+<meta property="article:author" content="ychzh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitychzh.github.io/hskt6/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ychzh_title",
+  "alternateName": [
+    "gitychzh.github.io"
+  ],
+  "url": "https://gitychzh.github.io/hskt6/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://gitychzh.github.io/hskt6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ychzh_title',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="web_bg" style="background: [object Object];"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/%E7%83%A4%E7%BA%A2%E8%96%AF.png" alt="Logo"><span class="site-name">ychzh_title</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">ychzh_title</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/14/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="使用hexo搭建博客">使用hexo搭建博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-14T06:00:55.166Z" title="发表于 2025-11-14 06:00:55">2025-11-14</time></span></div><div class="content">环境搭建git下载与安装下载git ，安装就直接下一步即可，注意环境变量。验证是否安装正确 1git -v 显示版本号就表示成功 node下载与安装下载node,点get node.js,选择LTS（长期维护的版本）最新版，当前是V22.21.1验证是否安装正确 1node -v 显示版本号就表示成功 安装Hexo所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。 1npm install -g hexo-cli 验证是否安装正确 1hexo -v 显示版本号就表示成功 使用hexo创建项目初始化(创建)项目有以下两个方式，推荐第二种安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install 推荐在资源管理器中创建一个文件夹，文件夹名就是项目名，注意此文件夹必须为空，运行如下命令1hexo init . 注意，结尾必须有一个” . “,英文的点,表示在当前目录下创建项目。初始化后，您的项目文件夹将如下所示： 安装依赖，...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/13/git%E6%95%99%E7%A8%8B/" title="git教程">git教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-13T23:43:46.000Z" title="发表于 2025-11-13 23:43:46">2025-11-13</time></span></div><div class="content">查看日志git log –oneline –pretty&#x3D;format:”%h - %ad : %s” –date&#x3D;format:”%Y-%m-%d %H:%M:%S”输出格式如下：8f86ff4 - 2025-11-12 01:41:32 : 新增搜索功能5af639d - 2025-11-10 02:45:04 : 20251109，最后一次修改8c00529 - 2025-11-09 23:35:48 : 来自本地跟新10dbf5a8 - 2025-11-09 14:21:42 : update source&#x2F;_posts&#x2F;第六篇博客.md. 回退到某个节点，比如上面的 8c00529，此命令会删除比它晚提交的所有节点，只保留一个比它早提交的节点。git reset –hard 8c00529 回退到上一个节点，或者上上个节点git reset –hard head^git reset –hard head^^ 本地新建分支，以上操作必须先建立分支，保留主分支master的完整性。git branch feature&#x2F;tes...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/12/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98butterfly/" title="修改主题butterfly">修改主题butterfly</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-12T10:53:03.000Z" title="发表于 2025-11-12 10:53:03">2025-11-12</time></span></div><div class="content">增加搜索功能详细说明请参考butterfly主题配置(文档三)第17项，编辑_config.butterfly.yml 12345search:  # Choose: algolia_search / local_search / docsearch  # leave it empty if you don&#x27;t need search  use: local_search #@ychzh 修改  placeholder:  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/10/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9AcloudflarePages%E6%95%99%E7%A8%8B/" title="域名绑定cloudflarePages教程">域名绑定cloudflarePages教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-10T00:30:17.000Z" title="发表于 2025-11-10 00:30:17">2025-11-10</time></span></div><div class="content">域名绑定博客网站网址cloudflarePages教程此教程是在spaceship上购买的域名绑定到cloudflare,以我自己的域名223722.xyz为例。在此之前，先创建 cloudflare pages，与github pages类似。 1在spaceship.com购买域名与DNS设置打开spaceship，选择好域名，付款，登录， —— 点右上角 Launchpad(启动面板) —— Domain Manager(域名管理器) —— 出现你的域名比如我的是 223722.xyz 点开 —— 右侧出现面板 ——点Nameservers &amp; DNS —— Nameservers 那一栏，点Change —— 选Custom nameservers ——把默认的两个DNS改成如下两个 charles.ns.cloudflare.com ，kim.ns.cloudflare.com 这两个是cloudflare提供的DNS 非常关键的步骤，—— 点Save  nameserver settings（右下角），可以推出spaceship网页了，后续用不到。 2在clo...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/11/09/gitee%E7%9A%84%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E6%95%99%E7%A8%8B/" title="gitee的仓库镜像管理功能教程">gitee的仓库镜像管理功能教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-09T23:41:12.000Z" title="发表于 2025-11-09 23:41:12">2025-11-09</time></span></div><div class="content">ggitee的仓库镜像管理功能教程gitee pull github ，就是gitee管理管理github的仓库，把gitee代码拉取到github上，解决github访问受限的问题，前提是先绑定github账号，只有自己的账号才可以有这个功能。 1、gitee创建仓库登录自己的仓库点右上角的加号，新建仓库——右上角点击导入——点导入GitHub仓库（不要选默认的从URL导入）——待页面跳转后，选择需要管理的仓库，点导入,过几秒到几分钟不等即可查看仓库，就跟自己创建的仓库一模一样了。 2、github创建Personal access tokens(个人令牌，后续gitee那边需要用)登录github账号———点右上角自己的头像———点Settings（这个是整个账号而不是某个项目的设置）——页面跳转，点左侧的边框，往下拉，最底下的Developer settings——Personal access tokens——Tokens(classic)——右上角Generate new token ——选Generate new token(classic)跳转到New person...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ychzh</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/14/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="使用hexo搭建博客">使用hexo搭建博客</a><time datetime="2025-11-14T06:00:55.166Z" title="发表于 2025-11-14 06:00:55">2025-11-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/13/git%E6%95%99%E7%A8%8B/" title="git教程">git教程</a><time datetime="2025-11-13T23:43:46.000Z" title="发表于 2025-11-13 23:43:46">2025-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/12/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98butterfly/" title="修改主题butterfly">修改主题butterfly</a><time datetime="2025-11-12T10:53:03.000Z" title="发表于 2025-11-12 10:53:03">2025-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/10/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9AcloudflarePages%E6%95%99%E7%A8%8B/" title="域名绑定cloudflarePages教程">域名绑定cloudflarePages教程</a><time datetime="2025-11-10T00:30:17.000Z" title="发表于 2025-11-10 00:30:17">2025-11-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/09/gitee%E7%9A%84%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E6%95%99%E7%A8%8B/" title="gitee的仓库镜像管理功能教程">gitee的仓库镜像管理功能教程</a><time datetime="2025-11-09T23:41:12.000Z" title="发表于 2025-11-09 23:41:12">2025-11-09</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%88%91%E6%98%AF%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98butterfly%E7%9A%84tag/" style="font-size: 1.1em; color: #999">我是修改主题butterfly的tag</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-14T06:01:07.153Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By ychzh</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script async data-pjax src="/"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div></body></html>
