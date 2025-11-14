@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.20.0' # 使用你指定的22.x大版本
+          node-version: '22.21.1' # 使用你指定的22.x大版本
           cache: 'npm' # 缓存npm依赖，加快后续构建速度
 
       # 3. 安装依赖并构建
